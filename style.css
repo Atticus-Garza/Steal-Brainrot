@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: white;
+}
+
+.game-container {
+  position: relative;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+#gameCanvas {
+  border: 3px solid #fff;
+  border-radius: 10px;
+  background: #1a1a2e;
+  display: block;
+}
+
+.ui-overlay {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.stats {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 150px;
+}
+
+.stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stat-label {
+  font-weight: bold;
+  color: #ccc;
+}
+
+#score, #health, #collected {
+  font-weight: bold;
+  color: #00ff88;
+  font-size: 1.1em;
+}
+
+.rarity-guide {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.rarity-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9em;
+}
+
+.rarity-color {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.rarity-color.common { background: #9e9e9e; }
+.rarity-color.uncommon { background: #4caf50; }
+.rarity-color.rare { background: #2196f3; }
+.rarity-color.epic { background: #9c27b0; }
+.rarity-color.legendary { background: #ff9800; }
+.rarity-color.mythic { background: #f44336; }
+
+.controls {
+  text-align: center;
+  margin-top: 15px;
+  color: #ccc;
+}
+
+.controls p {
+  margin: 5px 0;
+  font-size: 0.9em;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.pulse {
+  animation: pulse 0.5s ease-in-out;
+}
